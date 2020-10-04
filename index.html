@@ -69,7 +69,7 @@
 			</div>
 		</div>
 		<div id="content_body" class="flex-box">
-			<article class="flex-box bubble_message text-color2 flex-left">
+			<!-- <article class="flex-box bubble_message text-color2 flex-left">
 				<span>Assalamu'alaikum </span>
 				<div class="message_stat flex-box">
 					<span>17:00</span>
@@ -92,6 +92,14 @@
 					Tempat/Tanggal Lahir : Bandung, 16 Agustus 1997 <br>
 					Pendidikan Terakhir : S1 Teknik Informatika Universitas Islam Negeri Sultan Syarif Kasim Riau <br>
 					Domisili : Jalan Garuda Sakti, Pekanbaru, Riau. <br> <br>
+				</span>
+				<div class="message_stat flex-box">
+					<span>17:04</span>
+				</div>
+			</article>
+			<article class="flex-box bubble_message text-color2 flex-left">
+				<span>
+					<img src="/img/pas foto.jpg" width="250px" height="250px" style="object-fit: cover; border-radius: 15px;" alt="">
 				</span>
 				<div class="message_stat flex-box">
 					<span>17:04</span>
@@ -141,12 +149,12 @@
 				<div class="message_stat flex-box">
 					<span>17:07</span>
 				</div>
-			</article>
+			</article> -->
 		</div>
 		<div id="content_footer" class="flex-box" >
 			<div id="footer_message" class="flex-box">
-				<form action="">
-					<input type="text" id="message_bar" class="no-outline" placeholder="Type a message" autofocus>
+				<form action="" id="sendForm" autocomplete="off">
+					<input type="text" id="message_bar" class="no-outline" placeholder="Type a message">
 				</form>
 			</div>
 			<div id="send_button">
@@ -160,16 +168,119 @@
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script type="text/javascript">
-	$(document).ready(function (){
-		console.log('tes');
-		// $("#content_body").animate({ scrollTop: $('divname').prop("scrollHeight")}, 0);
-		document.getElementsByClassName("bubble_message highlighted")[0].scrollIntoView();
-		
+
+	let data_chat = [
+		{
+			id : "him",
+			message : "Assalamu'alaikum",
+			time : "17:00"
+		},
+		{
+			id : "me",
+			message : "Wa'alaikumussalam",
+			time : "17:01"
+		},
+		{
+			id : "him",
+			message : `Perkenalkan, nama saya Mahardika Kharisma Adjie, berikut adalah biodata lengkap diri saya... <br> <br>
+					Nama Lengkap : Mahardika Kharisma Adjie <br>
+					Nama Panggilan : Dika <br>
+					Tempat/Tanggal Lahir : Bandung, 16 Agustus 1997 <br>
+					Pendidikan Terakhir : S1 Teknik Informatika Universitas Islam Negeri Sultan Syarif Kasim Riau <br>
+					Domisili : Jalan Garuda Sakti, Pekanbaru, Riau. <br> <br>`,
+			time : "17:04"
+		},
+		{
+			id : "him",
+			message : `<img src="/img/pas-foto.jpg" width="250px" height="250px" style="object-fit: cover; border-radius: 15px;" alt="">`,
+			time : "17:04"
+		},
+		{
+			id : "him",
+			message : "Saya mengambil kelas Belajar Dasar Pemrograman Web di Dicoding melalui jalur Prakerja, sebelumnya saya sudah pernah juga menyelesaikan modul pembelajaran dari Dicoding yaitu kelas Menjadi Android Developer Expert, yang saat ini sudah berubah nama menjadi Belajar Fundamental Aplikasi Android.",
+			time : "17:05"
+		},
+		{
+			id : "me",
+			message : "Terima kasih atas partisipasinya dalam program pembelajaran yang diadakan oleh dicoding",
+			time : "17:06"
+		},
+		{
+			id : "me",
+			message : "Mohon ditunggu hasil review tugasnya dari kami, semoga mendapatkan hasil yang memuaskan...",
+			time : "17:06"
+		},
+		{
+			id : "me",
+			message : "Banyak2 berdoa ya hhaha",
+			time : "17:07"
+		},
+		{
+			id : "him",
+			message : "Okesiap bosss wkwkwk",
+			time : "17:07"
+		},
+	];
+
+	let isi_chat = ``;
+
+	data_chat.map((data,i) => {
+		isi_chat += `
+		<article class="flex-box bubble_message text-color2 ${(data.id == 'him') ? 'flex-left' : 'flex-right'} ${(i == data_chat.length-1) ? 'highlighted' : ''}">
+			<span>${data.message} </span>
+			<div class="message_stat flex-box">
+				<span>${data.time}</span>
+				${(data.id != 'him') 
+				? '<span><img src="img/doubletick.png" alt="" ></span>'
+				: ''
+				}
+			</div>
+		</article>
+		`;
 	});
-	// This is animation for new message
-	$("#btn1").click(function(){
-			$("#box").animate({height: "300px"});
-		});
+
+	$('#content_body').append(isi_chat);
+
+	$(document).ready(function (){
+		
+		$("#content_body").animate({ scrollTop: $('#content_body').prop("scrollHeight") - $('#content_body').prop("clientHeight")}, 1500);
+		// document.getElementsByClassName("bubble_message highlighted")[0].scrollIntoView();
+
+	});
+
+	$("#sendForm").submit(function (e){
+		e.preventDefault();
+		let input = $("#message_bar").val();
+		// console.log(input)
+
+		var time = new Date().toLocaleTimeString('ja-JP');
+		time = time.substr(0, 5);
+		console.log(time)
+
+		// Remove old highlight
+		$('article').removeClass('highlighted');
+
+		let new_message = `
+		<article class="flex-box bubble_message text-color2 flex-right highlighted">
+			<span>${input}</span>
+			<div class="message_stat flex-box">
+				<span>${time}</span>
+			</div>
+			<span><img src="img/doubletick.png" alt="" style="width: 13px; height: 13px; vertical-align:bottom;"></span>
+		</article>
+		`;
+
+		// Push new message to content_body
+		$('#content_body').append(new_message);
+
+		// automaticly scrolling
+		$("#content_body").animate({ scrollTop: $('#content_body').prop("scrollHeight") - $('#content_body').prop("clientHeight")}, 500);
+
+		// Reset input box
+		document.getElementById('message_bar').value = '';
+
+
+	})
 </script>
 </body>
 </html>

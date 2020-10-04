@@ -16,14 +16,14 @@
 body {
 	max-width: 1366px;
 	margin: 0px auto;
-	background-color: darkgray;
+	/* background-color: darkgray; */
 	font-family: Helvetica;
 }
 
 header {
 	height: auto;
 	width: 100%;
-	background-color: aqua;
+	/* background-color: aqua; */
 	display: flex;
 	flex-direction: column;
 	background-image: url("../img/sunrise.jpg");
@@ -126,7 +126,7 @@ nav > ul > li a:hover {
 main {
 	display: flex;
 	flex-direction: row;
-	height: 450px;
+	height: 550px;
 }
 
 aside {
@@ -238,7 +238,7 @@ aside {
 
 #content {
 	width: -webkit-fill-available;
-	background-color: darkgreen;
+	/* background-color: darkgreen; */
 	/* display: flex; */
 	flex-direction: column;
 	/* padding: 10px; */
@@ -285,8 +285,8 @@ aside {
 #content_body {
 	flex-grow: 100;
 	flex-direction: column;
-	background-color: rgb(184, 42, 42);
 	background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+	/* background-color: rgb(184, 42, 42); */
 	/* background-repeat: repeat; */
 	/* background-position: center; */
 	padding: 10px 60px;
@@ -340,9 +340,15 @@ article > span {
 	vertical-align: middle;
 }
 
-#footer_message > input {
+#footer_message > form {
+	width: -webkit-fill-available;
+	height: -webkit-fill-available;
+}
+
+#footer_message > form > input {
 	border-radius: 20px;
 	width: -webkit-fill-available;
+	height: -webkit-fill-available;
 }
 
 i {
