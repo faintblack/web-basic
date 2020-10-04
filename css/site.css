@@ -14,7 +14,7 @@
 }
 
 body {
-	max-width: 1200px;
+	max-width: 1366px;
 	margin: 0px auto;
 	background-color: darkgray;
 	font-family: Helvetica;
@@ -289,14 +289,17 @@ aside {
 	background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
 	/* background-repeat: repeat; */
 	/* background-position: center; */
-	padding: 10px;
+	padding: 10px 60px;
 	overflow-y: scroll;
-	height: 50px;
 }
 
-i {
-	height: fit-content;
-	cursor: pointer;
+#content_footer {
+	height: 25px;
+	background-color: #f0f0f0;
+	border-left: solid 1px #dedede;
+	border-top: solid 1px #dedede;
+	padding: 5px;
+	flex-direction: row;
 }
 
 article {
@@ -310,42 +313,75 @@ article {
 	border-radius: 15px;
 	justify-content: space-between;
 	width: fit-content;
+	max-width: 70%;
 }
 
 .message_stat {
 	margin-left: 20px;
+	font-size: 11px;
+	align-items: flex-end;
 }
 
 .message_stat > span > img {
-	width: 15px;
-	height: 15px;
+	width: 13px;
+	height: 13px;
+	vertical-align: bottom;
 }
-
 
 article > span {
 	font-size: 13px;
 }
 
-
-span{
-	font-size: 15px;
+#footer_message {
+	/* background-color: rgb(192, 26, 26); */
+	/* height: 100px; */
+	width: 100px;
+	flex-grow: 100;
+	vertical-align: middle;
 }
 
-.flex-right{
+#footer_message > input {
+	border-radius: 20px;
+	width: -webkit-fill-available;
+}
+
+i {
+	height: fit-content;
+	cursor: pointer;
+}
+
+.flex-right {
 	background-color: rgb(193, 252, 104);
 	align-self: flex-end;
 }
 
-.flex-left{
+.flex-left {
 	background-color: rgb(255, 255, 255);
 	align-self: flex-start;
 }
 
 .shadow {
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  
-	-moz-box-shadow:    3px 3px 5px 6px #ccc;  
-	box-shadow:         3px 3px 5px 6px #ccc;  
+	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+	-moz-box-shadow: 3px 3px 5px 6px #ccc;
+	box-shadow: 3px 3px 5px 6px #ccc;
 }
+
+input {
+	padding-left: 10px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background-color: #fff;
+}
+
+.no-outline:focus {
+  outline: none;
+}
+
+
+
+
 
 
 

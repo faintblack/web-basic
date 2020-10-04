@@ -46,7 +46,7 @@
 						<h4 class="text-color">Mahardika Kharisma Adjie</h4>
 					</div>
 					<div class="chat_message">
-						<h5 class="text-color2">Terima kasih Dicoding...</h5>
+						<h5 class="text-color2">Okesiap bosss wkwkwk </h5>
 					</div>
 				</div>
 				<div class="chat_time">
@@ -71,30 +71,105 @@
 		<div id="content_body" class="flex-box">
 			<article class="flex-box bubble_message text-color2 flex-left">
 				<span>Assalamu'alaikum </span>
-				<div class="message_stat">
-					<span style="font-size: 13px;" >17:00</span>
-					<!-- <span><img src="img/doubletick.png" alt=""></span> -->
+				<div class="message_stat flex-box">
+					<span>17:00</span>
 				</div>
 			</article>
+
 			<article class="flex-box bubble_message text-color2 flex-right">
 				<span>Wa'alaikumussalam</span>
-				<div class="message_stat">
-					<span style="font-size: 13px;" >17:00</span>
+				<div class="message_stat flex-box">
+					<span>17:01</span>
 					<span><img src="img/doubletick.png" alt=""></span>
 				</div>
 			</article>
-			
+
+			<article class="flex-box bubble_message text-color2 flex-left">
+				<span>
+					Perkenalkan, nama saya Mahardika Kharisma Adjie, berikut adalah biodata lengkap diri saya... <br> <br>
+					Nama Lengkap : Mahardika Kharisma Adjie <br>
+					Nama Panggilan : Dika <br>
+					Tempat/Tanggal Lahir : Bandung, 16 Agustus 1997 <br>
+					Pendidikan Terakhir : S1 Teknik Informatika Universitas Islam Negeri Sultan Syarif Kasim Riau <br>
+					Domisili : Jalan Garuda Sakti, Pekanbaru, Riau. <br> <br>
+				</span>
+				<div class="message_stat flex-box">
+					<span>17:04</span>
+				</div>
+			</article>
+			<article class="flex-box bubble_message text-color2 flex-left">
+				<span>
+					Saya mengambil kelas Belajar Dasar Pemrograman Web di Dicoding melalui jalur Prakerja, sebelumnya saya sudah pernah juga menyelesaikan modul pembelajaran dari Dicoding yaitu kelas Menjadi Android Developer Expert, yang saat ini sudah berubah nama menjadi Belajar Fundamental Aplikasi Android.
+				</span>
+				<div class="message_stat flex-box">
+					<span>17:05</span>
+				</div>
+			</article>
+
+			<article class="flex-box bubble_message text-color2 flex-right">
+				<span>
+					Terima kasih atas partisipasinya dalam program pembelajaran yang diadakan oleh dicoding
+				</span>
+				<div class="message_stat flex-box">
+					<span>17:06</span>
+					<span><img src="img/doubletick.png" alt=""></span>
+				</div>
+			</article>
+			<article class="flex-box bubble_message text-color2 flex-right">
+				<span>
+					Mohon ditunggu hasil review tugasnya dari kami, semoga mendapatkan hasil yang memuaskan...
+				</span>
+				<div class="message_stat flex-box">
+					<span>17:06</span>
+					<span><img src="img/doubletick.png" alt=""></span>
+				</div>
+			</article>
+			<article class="flex-box bubble_message text-color2 flex-right">
+				<span>
+					Banyak2 berdoa ya hhaha
+				</span>
+				<div class="message_stat flex-box">
+					<span>17:07</span>
+					<span><img src="img/doubletick.png" alt=""></span>
+				</div>
+			</article>
+
+			<article id="last-message" class="flex-box bubble_message text-color2 flex-left highlighted">
+				<span>
+					Okesiap bosss wkwkwk
+				</span>
+				<div class="message_stat flex-box">
+					<span>17:07</span>
+				</div>
+			</article>
 		</div>
-		<!-- <article id="article1">
-			<h1>Mahardika Kharisma Ajie</h1>
-		</article> -->
-		<!-- <article id="article2">
-			<h1>Mahardika Kharisma Ajie</h1>
-		</article> -->
+		<div id="content_footer" class="flex-box" >
+			<div id="footer_message" class="flex-box">
+				<form action="">
+					<input type="text" id="message_bar" class="no-outline" placeholder="Type a message" autofocus>
+				</form>
+			</div>
+			<div id="send_button">
+
+			</div>
+		</div>
 	</div>
 </main>
 <footer>
 
 </footer>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(document).ready(function (){
+		console.log('tes');
+		// $("#content_body").animate({ scrollTop: $('divname').prop("scrollHeight")}, 0);
+		document.getElementsByClassName("bubble_message highlighted")[0].scrollIntoView();
+		
+	});
+	// This is animation for new message
+	$("#btn1").click(function(){
+			$("#box").animate({height: "300px"});
+		});
+</script>
 </body>
 </html>
