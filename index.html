@@ -4,6 +4,7 @@
 	<title></title>
 	<link rel="stylesheet" href="./css/site.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 <body>
 <header>
@@ -24,10 +25,15 @@
 	<aside>
 		<div id="profile_bar">
 			<div id="profile_pict">
-				<img src="img/dika.jpg" id="foto_profil" alt="Mahardika Kharisma Ajie">
+				<img src="img/user.png" id="foto_profil" alt="Mahardika Kharisma Ajie">
 			</div>
-			<div id="profile_stat">
-
+			<div id="profile_stat" class="flex-box">
+				<h3 class="text-color">You</h3>
+			</div>
+			<div id="profile_icon" class="flex-box text-color2">
+				<i class="fas fa-circle-notch"></i>
+				<i class="fas fa-comment-alt"></i>
+				<i class="fas fa-ellipsis-v"></i>
 			</div>
 		</div>
 		<div id="chat_bar" >
@@ -37,19 +43,54 @@
 				</div>
 				<div class="chat_content" >
 					<div class="chat_name">
-						<h4>Mahardika Kharisma Adjie</h4>
+						<h4 class="text-color">Mahardika Kharisma Adjie</h4>
 					</div>
-					<div id="chat_message">
-						<h5>Terima kasih Dicoding...</h5>
+					<div class="chat_message">
+						<h5 class="text-color2">Terima kasih Dicoding...</h5>
 					</div>
+				</div>
+				<div class="chat_time">
+					<p>now</p>
 				</div>
 			</div>
 		</div>
 	</aside>
-	<div id="content">
-		<article id="article1">
+	<div id="content" class="flex-box">
+		<div id="content_header">
+			<div id="content_profile_pict">
+				<img src="img/dika.jpg" id="foto_profil3" alt="Mahardika Kharisma Ajie">
+			</div>
+			<div id="content_profile_name">
+				<h3 class="text-color">Mahardika Kharisma Adjie</h3>
+			</div>
+			<div id="content_header_symbol" class="flex-box text-color2">
+				<i class="fas fa-search"></i>
+				<i class="fas fa-ellipsis-v"></i>
+			</div>
+		</div>
+		<div id="content_body" class="flex-box">
+			<article class="flex-box bubble_message text-color2 flex-left">
+				<span>Assalamu'alaikum </span>
+				<div class="message_stat">
+					<span style="font-size: 13px;" >17:00</span>
+					<!-- <span><img src="img/doubletick.png" alt=""></span> -->
+				</div>
+			</article>
+			<article class="flex-box bubble_message text-color2 flex-right">
+				<span>Wa'alaikumussalam</span>
+				<div class="message_stat">
+					<span style="font-size: 13px;" >17:00</span>
+					<span><img src="img/doubletick.png" alt=""></span>
+				</div>
+			</article>
+			
+		</div>
+		<!-- <article id="article1">
 			<h1>Mahardika Kharisma Ajie</h1>
-		</article>
+		</article> -->
+		<!-- <article id="article2">
+			<h1>Mahardika Kharisma Ajie</h1>
+		</article> -->
 	</div>
 </main>
 <footer>
