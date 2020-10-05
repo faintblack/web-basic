@@ -174,12 +174,9 @@ aside {
 }
 
 #chat_bar {
-	/* height: -webkit-fill-available; */
 	flex-grow: 100;
 	display: flex;
 	flex-direction: column;
-	/* background-color: sandybrown; */
-	/* padding: 10px; */
 }
 
 .chat_list {
@@ -189,6 +186,7 @@ aside {
 	display: flex;
 	flex-direction: row;
 	padding: 10px;
+	cursor: pointer;
 }
 
 .chat_pict {
@@ -285,7 +283,8 @@ aside {
 #content_body {
 	flex-grow: 100;
 	flex-direction: column;
-	background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+	/* background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png"); */
+	background-image: url("../img/chat_background.png");
 	/* background-color: rgb(184, 42, 42); */
 	/* background-repeat: repeat; */
 	/* background-position: center; */
@@ -367,36 +366,32 @@ i {
 }
 
 .shadow {
-	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
-	-moz-box-shadow: 3px 3px 5px 6px #ccc;
-	box-shadow: 3px 3px 5px 6px #ccc;
+	-webkit-box-shadow: 3px 3px 3px 3px #ccc;
+	-moz-box-shadow: 3px 3px 3px 3px #ccc;
+	box-shadow: 3px 3px 3px 3px #ccc;
 }
 
 input {
 	padding-left: 10px;
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: hidden;
-  background-color: #fff;
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	border-bottom-style: hidden;
+	background-color: #fff;
 }
 
 .no-outline:focus {
-  outline: none;
+	outline: none;
 }
 
-
-
-
-
-
-
-
-
-#article2 {
-	height: 50%;
-	background-color: rgb(151, 28, 141);
-	vertical-align: middle;
+/* For width 400px and smaller: */
+@media only screen and (max-width: 600px) {
+	body {
+		/* background-image: url('img_flowers.jpg'); */
+	}
+	aside {
+		display: none;
+	}
 }
 
 footer {

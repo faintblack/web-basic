@@ -5,12 +5,12 @@
 	<link rel="stylesheet" href="./css/site.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="shortcut icon" href="">
 </head>
 <body>
 <header>
 	<div id="app-title">
-		<h1>Sense Developer</h1>
-		<h2>Pekanbaru</h2>
+		<h1>Dicoding Final Submission</h1>
 	</div>
 	
 	<nav>
@@ -69,87 +69,7 @@
 			</div>
 		</div>
 		<div id="content_body" class="flex-box">
-			<!-- <article class="flex-box bubble_message text-color2 flex-left">
-				<span>Assalamu'alaikum </span>
-				<div class="message_stat flex-box">
-					<span>17:00</span>
-				</div>
-			</article>
-
-			<article class="flex-box bubble_message text-color2 flex-right">
-				<span>Wa'alaikumussalam</span>
-				<div class="message_stat flex-box">
-					<span>17:01</span>
-					<span><img src="img/doubletick.png" alt=""></span>
-				</div>
-			</article>
-
-			<article class="flex-box bubble_message text-color2 flex-left">
-				<span>
-					Perkenalkan, nama saya Mahardika Kharisma Adjie, berikut adalah biodata lengkap diri saya... <br> <br>
-					Nama Lengkap : Mahardika Kharisma Adjie <br>
-					Nama Panggilan : Dika <br>
-					Tempat/Tanggal Lahir : Bandung, 16 Agustus 1997 <br>
-					Pendidikan Terakhir : S1 Teknik Informatika Universitas Islam Negeri Sultan Syarif Kasim Riau <br>
-					Domisili : Jalan Garuda Sakti, Pekanbaru, Riau. <br> <br>
-				</span>
-				<div class="message_stat flex-box">
-					<span>17:04</span>
-				</div>
-			</article>
-			<article class="flex-box bubble_message text-color2 flex-left">
-				<span>
-					<img src="/img/pas foto.jpg" width="250px" height="250px" style="object-fit: cover; border-radius: 15px;" alt="">
-				</span>
-				<div class="message_stat flex-box">
-					<span>17:04</span>
-				</div>
-			</article>
-			<article class="flex-box bubble_message text-color2 flex-left">
-				<span>
-					Saya mengambil kelas Belajar Dasar Pemrograman Web di Dicoding melalui jalur Prakerja, sebelumnya saya sudah pernah juga menyelesaikan modul pembelajaran dari Dicoding yaitu kelas Menjadi Android Developer Expert, yang saat ini sudah berubah nama menjadi Belajar Fundamental Aplikasi Android.
-				</span>
-				<div class="message_stat flex-box">
-					<span>17:05</span>
-				</div>
-			</article>
-
-			<article class="flex-box bubble_message text-color2 flex-right">
-				<span>
-					Terima kasih atas partisipasinya dalam program pembelajaran yang diadakan oleh dicoding
-				</span>
-				<div class="message_stat flex-box">
-					<span>17:06</span>
-					<span><img src="img/doubletick.png" alt=""></span>
-				</div>
-			</article>
-			<article class="flex-box bubble_message text-color2 flex-right">
-				<span>
-					Mohon ditunggu hasil review tugasnya dari kami, semoga mendapatkan hasil yang memuaskan...
-				</span>
-				<div class="message_stat flex-box">
-					<span>17:06</span>
-					<span><img src="img/doubletick.png" alt=""></span>
-				</div>
-			</article>
-			<article class="flex-box bubble_message text-color2 flex-right">
-				<span>
-					Banyak2 berdoa ya hhaha
-				</span>
-				<div class="message_stat flex-box">
-					<span>17:07</span>
-					<span><img src="img/doubletick.png" alt=""></span>
-				</div>
-			</article>
-
-			<article id="last-message" class="flex-box bubble_message text-color2 flex-left highlighted">
-				<span>
-					Okesiap bosss wkwkwk
-				</span>
-				<div class="message_stat flex-box">
-					<span>17:07</span>
-				</div>
-			</article> -->
+			
 		</div>
 		<div id="content_footer" class="flex-box" >
 			<div id="footer_message" class="flex-box">
@@ -192,7 +112,7 @@
 		},
 		{
 			id : "him",
-			message : `<img src="/img/pas-foto.jpg" width="250px" height="250px" style="object-fit: cover; border-radius: 15px;" alt="">`,
+			message : `<img src="/img/pas-foto.jpg" width="100%" height="100%" style="object-fit: cover; border-radius: 15px; max-width:250px; max-height:250px" alt="" >`,
 			time : "17:04"
 		},
 		{
@@ -226,7 +146,7 @@
 
 	data_chat.map((data,i) => {
 		isi_chat += `
-		<article class="flex-box bubble_message text-color2 ${(data.id == 'him') ? 'flex-left' : 'flex-right'} ${(i == data_chat.length-1) ? 'highlighted' : ''}">
+		<article class="flex-box bubble_message shadow text-color2 ${(data.id == 'him') ? 'flex-left' : 'flex-right'} ${(i == data_chat.length-1) ? 'highlighted' : ''}">
 			<span>${data.message} </span>
 			<div class="message_stat flex-box">
 				<span>${data.time}</span>
@@ -242,16 +162,12 @@
 	$('#content_body').append(isi_chat);
 
 	$(document).ready(function (){
-		
-		$("#content_body").animate({ scrollTop: $('#content_body').prop("scrollHeight") - $('#content_body').prop("clientHeight")}, 1500);
-		// document.getElementsByClassName("bubble_message highlighted")[0].scrollIntoView();
-
+		$("#content_body").animate({ scrollTop: $('#content_body').prop("scrollHeight") }, 1300);
 	});
 
 	$("#sendForm").submit(function (e){
 		e.preventDefault();
 		let input = $("#message_bar").val();
-		// console.log(input)
 
 		var time = new Date().toLocaleTimeString('ja-JP');
 		time = time.substr(0, 5);
@@ -261,7 +177,7 @@
 		$('article').removeClass('highlighted');
 
 		let new_message = `
-		<article class="flex-box bubble_message text-color2 flex-right highlighted">
+		<article class="flex-box bubble_message text-color2 shadow flex-right highlighted">
 			<span>${input}</span>
 			<div class="message_stat flex-box">
 				<span>${time}</span>
@@ -278,8 +194,10 @@
 
 		// Reset input box
 		document.getElementById('message_bar').value = '';
+	})
 
-
+	$(".chat_list").on('click', function(){
+		$("#content_body").animate({ scrollTop: $('#content_body').prop("scrollHeight") - $('#content_body').prop("clientHeight")}, 500);
 	})
 </script>
 </body>
